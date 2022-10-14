@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial - Dungeons & Dragons</title>
+    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/style-base.css">
+    <link rel="icon" href="assets/icon/logo.png">
+</head>
+<body>
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/icon/logo.png" alt="" width="70px">
+                    <h1>Dungeons & Dragons</h1>
+                </div>
+                <ul class="navbar">
+                    <li class="here"><a href="">Inicial</a></li>
+                    <li>|</li>
+                    <li class=""><a href="login.html">Login</a></li>
+                    <li class=""><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="background">
+        <div class="we">
+            <div class="imagem">
+            <div class="container">
+                <h2>O que é RPG de mesa?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo rem earum modi, quia quo odio!
+                     Cum deleniti recusandae perspiciatis inventore iusto? Dicta, numquam iure. Commodi porro iste eos 
+                     doloribus? </p>
+            </div>
+                <img src="assets/imgs/mesa.jpg" alt="">
+            </div>
+        </div>
+        <div class="solucion">
+            <div class="img">
+            <img src="assets/imgs/dnd.jpg" alt="">
+            <div class="container">
+                <h2>Dungeons & Dragons</h2>
+
+                <h3>D&D</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestias commodi nobis ex iure deleniti libero 
+                    laudantium unde, consequatur quisquam modi quos voluptatibus nisi laborum assumenda. Sequi facilis consequatur sed?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit magnam rerum tempora facilis quia accusantium reiciendis 
+                    laudantium, cum ab sed. Culpa magnam aspernatur suscipit amet ut! Voluptates praesentium culpa dolorum.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="social">
+            <div class="container">
+                <div class="boxes" id="boxes1" style="display: flex;">
+                    <button onclick="mostrar1()"><div class="box">
+                        <img src="assets/imgs/d20.png" alt="">
+                        <h4>D20</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                    <button onclick="mostrar2()"><div class="box">
+                        <img src="assets/imgs/d12.png" alt="">
+                        <h4>D12</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                    <button onclick="mostrar3()"><div class="box">
+                        <img src="assets/imgs/d10.png" alt="">
+                        <h4>D10</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                </div>
+                <div class="boxes" id="boxes2" style="display: flex;">
+                    <button onclick="mostrar4()"><div class="box">
+                        <img src="assets/imgs/d8.png" alt="">
+                        <h4>D8</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                    <button onclick="mostrar5()"><div class="box">
+                        <img src="assets/imgs/d6.png" alt="">
+                        <h4>D6</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                    <button onclick="mostrar6()"><div class="box">
+                        <img src="assets/imgs/d4.png" alt="">
+                        <h4>D4</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div></button>
+                </div>
+                <div id="D20" style="display: none;">
+                    <button onclick="mostrar1()"><div class="box">
+                        <img src="assets/imgs/d20.png" alt="">
+                        <h4>D20</h4>
+                        <div class="valor" id="valor"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+                <div id="D12" style="display: none;">
+                    <button onclick="mostrar2()"><div class="box">
+                        <img src="assets/imgs/d12.png" alt="">
+                        <h4>D12</h4>
+                        <div class="valor" id="valor2"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+                <div id="D10" style="display: none;">
+                    <button onclick="mostrar3()"><div class="box">
+                        <img src="assets/imgs/d10.png" alt="">
+                        <h4>D10</h4>
+                        <div class="valor" id="valor3"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+                <div id="D8" style="display: none;">
+                    <button onclick="mostrar4()"><div class="box">
+                        <img src="assets/imgs/d8.png" alt="">
+                        <h4>D8</h4>
+                        <div class="valor" id="valor4"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+                <div id="D6" style="display: none;">
+                    <button onclick="mostrar5()"><div class="box">
+                        <img src="assets/imgs/d6.png" alt="">
+                        <h4>D6</h4>
+                        <div class="valor" id="valor5"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+                <div id="D4" style="display: none;">
+                    <button onclick="mostrar6()"><div class="box">
+                        <img src="assets/imgs/d4.png" alt="">
+                        <h4>D4</h4>
+                        <div class="valor" id="valor6"></div>
+                    </div></button>
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <i>&copy; 2022 D&D &reg; todos os direitos reservados</i>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function voltar(){
+        D20.style.display = "none"
+        D12.style.display = "none"
+        D10.style.display = "none"
+        D8.style.display = "none"
+        D6.style.display = "none"
+        D4.style.display = "none"
+        boxes1.style.display = "flex"
+        boxes2.style.display = "flex"
+    }
+    function mostrar1(){
+        let result = Math.floor(Math.random() * (20 + 1 - 1)+ 1);
+        document.querySelector('#valor').textContent = result;
+
+        D20.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+    function mostrar2(){
+        let result2 = Math.floor(Math.random() * (12 + 1 - 1)+ 1);
+        document.querySelector('#valor2').textContent = result2;
+
+        D12.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+    function mostrar3(){
+        let result3 = Math.floor(Math.random() * (10 + 1 - 1)+ 1);
+        document.querySelector('#valor3').textContent = result3;
+
+        D10.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+    function mostrar4(){
+        let result4 = Math.floor(Math.random() * (8 + 1 - 1)+ 1);
+        document.querySelector('#valor4').textContent = result4;
+
+        D8.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+    function mostrar5(){
+        let result5 = Math.floor(Math.random() * (6 + 1 - 1)+ 1);
+        document.querySelector('#valor5').textContent = result5;
+
+        D6.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+    function mostrar6(){
+        let result6 = Math.floor(Math.random() * (4 + 1 - 1)+ 1);
+        document.querySelector('#valor6').textContent = result6;
+
+        D4.style.display = "flex"
+        boxes1.style.display = "none"
+        boxes2.style.display = "none"
+    }
+
+</script>

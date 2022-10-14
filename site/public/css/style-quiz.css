@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+}
+.background {
+    color: black;
+    padding:  40px 0;
+    height: 400px;
+    background-image: url("assets/background.jpg");
+    height: 800px;
+    background-size: cover;
+}
