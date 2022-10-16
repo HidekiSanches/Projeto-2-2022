@@ -4,19 +4,555 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz D&D</title>
+    <title>Quiz D&D - Dungeons & Dragons</title>
     <link rel="stylesheet" href="css\style-quiz.css">
+    <link rel="icon" href="assets/icon/logo.png">
 </head>
 <body>
-    <div class="banner">
-        
-    </div>
     <div class="background">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/icon/logo.png" alt="" width="70px">
+                    <h1>Dungeons & Dragons</h1>
+                </div>
+                <ul class="navbar">
+                    <li>Bem-vindo!</li>
+                    <li class="here">USER</li>
+                    <li>|</li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="container">
-            <div class="box">
-
+            <div class="box" id="base">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Introdução ao questionário</h4>
+                <p>A quinta edição de Dungeos and Dragons vem com diversas possibilidades de classes, cobrindo uma grande variedade de conceitos de personagens. Descubra qual cobina melhor com você!</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="css/assets/mestre.gif" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="iniciar1()">Iniciar quiz</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="ex1" style="display: none;">
+                <div class="boxes">
+                    <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                    <h4>Qual é o seu estilo? Poder, magia ou astúcia?</h4>
+                    <div class="full-box">
+                            <input type="radio" id="1e1" name="1" class="agreement" value="1">
+                            <label for="1e1" class="agreement">Força e astúcia</label> <!-- guerreiro -->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="1e2" name="1" class="agreement" value="2">
+                        <label for="1e2" class="agreement">Poder e magia</label> <!-- mago-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="1e3" name="1" class="agreement" value="3">
+                        <label for="1e3" class="agreement">Um pouco de tudo</label> <!--ladino-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="1e4" name="1" class="agreement" value="4">
+                        <label for="1e4" class="agreement">Astúcia</label> <!--clerigo-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="1e5" name="1" class="agreement" value="5">
+                        <label for="1e5" class="agreement">Magia</label> <!--druida-->
+                    </div>
+                    <div class="center">
+                        <img src="assets/imgs/magia.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="mostrar1()">Próxima</button>
+                    </div>
+            </div>
+            </div>
+            <div class="box" id="ex2" style="display: none;">
+                <div class="boxes">
+                    <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                    <h4>Qual é a melhor maneira de melhorar a si mesmo e se tornar grande?</h4>
+                    <div class="full-box">
+                        <input type="radio" id="2e1" name="1" class="agreement" value="7">
+                        <label for="2e1" class="agreement">Estudo</label> <!-- mago -->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="2e2" name="1" class="agreement" value="6">
+                        <label for="2e2" class="agreement">Experiência</label> <!-- guerrreiro-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="2e3" name="1" class="agreement" value="10">
+                        <label for="2e3" class="agreement">Observando</label> <!--druida-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="2e4" name="1" class="agreement" value="9">
+                        <label for="2e4" class="agreement">Seguindo conselhos</label> <!--clerigo-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="2e5" name="1" class="agreement" value="8">
+                        <label for="2e5" class="agreement">Talento</label> <!--ladino-->
+                    </div>
+                    <div class="center">
+                        <img src="assets/imgs/grande.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="mostrar2()">Próxima</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="ex3" style="display: none;">
+                <div class="boxes">
+                    <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                    <h4>Qual é a arma de sua escolha?</h4>
+            
+                    <div class="full-box">
+                        <input type="radio" id="3e1" name="1" class="agreement" value="11">
+                        <label for="3e1" class="agreement">Espada longa e um escudo</label> <!-- guerreiro -->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="3e2" name="1" class="agreement" value="15">
+                        <label for="3e2" class="agreement">Arma de longo alcance - arcos e bestas</label> <!-- druida-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="3e3" name="1" class="agreement" value="12">
+                        <label for="3e3" class="agreement">Magia</label> <!--mago-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="3e4" name="1" class="agreement" value="13">
+                        <label for="3e4" class="agreement">Armas leves - adagas e espadas curtas</label> <!--ladino-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="3e5" name="1" class="agreement" value="14">
+                        <label for="3e5" class="agreement">Armas versáteis - espadas longas e lanças</label> <!--clerigo-->
+                    </div>
+                    <div class="center">
+                        <img src="assets/imgs/arma.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="mostrar3()">Próxima</button>
+                    </div>
+            </div>
+            </div>
+            <div class="box" id="ex4" style="display: none;">
+                <div class="boxes">
+                    <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                    <h4>Qual é a melhor fonte de energia?</h4>
+                    <div class="full-box">
+                        <input type="radio" id="4e1" name="1" class="agreement" value="16">
+                        <label for="4e1" class="agreement">Magia arcana</label> <!-- mago -->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="4e2" name="1" class="agreement" value="17">
+                        <label for="4e2" class="agreement">Um espírito inabalável</label> <!-- guerrreiro-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="4e3" name="1" class="agreement" value="20">
+                        <label for="4e3" class="agreement">Natureza</label> <!--druida-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="4e4" name="1" class="agreement" value="19">
+                        <label for="4e4" class="agreement">Deuses</label> <!--clerigo-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="4e5" name="1" class="agreement" value="18">
+                        <label for="4e5" class="agreement">Uma mente ativa</label> <!--ladino-->
+                    </div>
+                    <div class="center">
+                        <img src="assets/imgs/poder.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="mostrar4()">Próxima</button>
+                    </div>
+            </div>
+            </div>
+            <div class="box" id="ex5" style="display: none;">
+                <div class="boxes">
+                    <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                    <h4>Qual você diria que é o seu maior patrimônio?</h4>
+                    <div class="full-box">
+                        <input type="radio" id="5e1" name="1" class="agreement" value="21">
+                        <label for="5e1" class="agreement">Inteligência</label> <!-- mago -->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="5e2" name="1" class="agreement" value="22">
+                        <label for="5e2" class="agreement">Força</label> <!-- guerrreiro-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="5e3" name="1" class="agreement" value="25">
+                        <label for="5e3" class="agreement">Sabedoria</label> <!--druida-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="5e4" name="1" class="agreement" value="24">
+                        <label for="5e4" class="agreement">Carisma</label> <!--clerigo-->
+                    </div>
+                    <div class="full-box">
+                        <input type="radio" id="5e5" name="1" class="agreement" value="23">
+                        <label for="5e5" class="agreement">Destreza</label> <!--ladino-->
+                    </div>
+                    <div class="center">
+                        <img src="assets/imgs/atributo.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="mostrar5()">Próxima</button>
+                    </div>
+            </div>
+            </div>
+            <div class="box" id="boxe1" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o mago! </h4>
+                <p>O mago é uma classe arcana que existe desde os primórdios do D&D, sendo fortemente influenciado por 
+                    Gandalf e Saruman. Além disso, como são muito inteligentes, os magos utilizam sua excelente memória 
+                    para guardar porções de conhecimento sobre diversos tipos de assuntos e por isso são consultados 
+                    quando alguém precisa de um conhecimento específico.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/mage.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+                <div class="box" id="boxe2" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o guerreiro! </h4>
+                <p>O guerreiro remete a imagem icônica do herói em armadura empunhando sua arma contra uma inimigo 
+                    aparente mais poderoso que ele. A base histórica desta classe são os grandes heróis da literatura, 
+                    tanto histórica quanto fantástica, como Aquiles, Artur, Beowulf, Tristão e Sigmund. Esta classe pode 
+                    atuar na linha de frente ou na retaguarda com igual desenvoltura, e pode atuar como atacante e 
+                    defensor com a mesma competência.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/fighter.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="boxe3" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o ladino! </h4>
+                <p>À primeira vista, o nome dessa classe pode induzir o jogador a achar que se trata de uma classe para 
+                    personagens exclusivamente desonestos, mas não é bem o caso. Não que isso esteja muito longe da 
+                    verdade, uma vez que o ladino usa artimanhas e trapaças para atingir seus objetivos, mas nem por 
+                    isso ele precisa ser maligno. Alguns exemplos de ladinos de persogens na literatura que usam astúsia 
+                    ao invés da força bruta são Bilbo, Ezio e Jaqen H'ghar.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/rogue.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="boxe4" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o Clérigo! </h4>
+                <p>O clérigo é um religioso, um indivíduo que dedica sua vida a levar a palavra de seu deus para os 
+                    outros. Estes personagens são admirados por aqueles que seguem os preceitos do mesmo deus, e temidos 
+                    e odiados por aqueles que adoram outras dinvidades. A base histórica do clérigo são os guerreiros 
+                    das ordens militares cristãs que participam das cruzadas, como os templários e hospitalários, por 
+                    isso os clérigos usam armaduras e usam armas.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/cleric.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="boxe5" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o druida! </h4>
+                <p>O druida é um lider religioso ligado à natureza, o que o aproxima tematicamente do clérigo, no 
+                    entanto, enquanto o clérigo cultua uma dinvidade, o druida reverencia a natureza. A base histórica 
+                    desta classe é o líder espiritual da civilização celta, cuja religião baseava-se no animismo, um 
+                    sistema de crenças que considera que tudo o que existe possui um espírito. O druida não era apenas 
+                    um sarcedote, mas também um estudiosa, professor, conselheiro, jurista, filósofo, curandeiro e mesmo 
+                    poeta, e por isso era considerado como detentor de grande saber.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/druid.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="boxe6" style="display: none;">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o monge! </h4>
+                <p>O monge é a classe mais exótica presente no D&D. Todas as classes presentes no D&D são baseadas em 
+                    personagens da fantasia ocidental, exceto o monge. Apesar da figura do monge existir na literatura 
+                    ocidental, estes personagens são descritos como homens religiosos vivendo isolado em monastérios 
+                    cujas atividades se restringem a copiar livros, praticar cantos gregorianos e eventualmente produzir 
+                    suas próprias cervejas e outras bebidas. A classe do monge baseia-se no personagem característico da 
+                    fantasia oriental, que apesar de também ser uma figura religiosa que mora em um monastério isolado, 
+                    passa seus dias meditando e praticando artes marciais. Essa classe foi introduzida na década de 70 
+                    graças à popularidade de filmes de kung-fu e à figura icônica de Bruce Lee.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/monk.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="voltar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <i>&copy; 2022 D&D &reg; todos os direitos reservados</i>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+
+    var exer11 = 0
+    var exer22 = 0
+    var exer33 = 0
+    var exer44 = 0
+    var exer55 = 0
+
+
+ function iniciar1(){
+    exer11 = 0
+    exer22 = 0
+    exer33 = 0
+    exer44 = 0
+    exer55 = 0
+    base.style.display = "none"
+    ex1.style.display = "flex"
+    ex2.style.display = "none"
+    ex3.style.display = "none"
+    ex4.style.display = "none"
+    ex5.style.display = "none"
+ }
+
+ function mostrar1(){
+    var exer1 = 0
+    var ele = document.getElementsByTagName('input');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked)
+                exer1 = ele[i].value;
+        }
+    }
+
+    if(exer1 == 0){
+        alert(`Selecione uma opção`)
+    }else {      
+        exer11 = exer1
+    base.style.display = "none"
+    ex1.style.display = "none"
+    ex2.style.display = "flex"
+    ex3.style.display = "none"
+    ex4.style.display = "none"
+    ex5.style.display = "none"
+
+    }
+
+ }
+ function mostrar2(){
+    var exer2 = 0
+    var ele = document.getElementsByTagName('input');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked)
+                exer2 = ele[i].value;
+        }
+    }
+
+    if(exer2 == 0 || exer2 == exer11){
+        alert(`Selecione uma opção`)
+    }else {      
+        exer22 = exer2
+    base.style.display = "none"
+    ex1.style.display = "none"
+    ex2.style.display = "none"
+    ex3.style.display = "flex"
+    ex4.style.display = "none"
+    ex5.style.display = "none"
+
+    }
+ }
+ function mostrar3(){
+    var exer3 = 0
+    var ele = document.getElementsByTagName('input');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked)
+                exer3 = ele[i].value;
+        }
+    }
+
+    if(exer3 == 0  || exer3 == exer22){
+        alert(`Selecione uma opção`)
+    }else {      
+        exer33 = exer3
+    base.style.display = "none"
+    ex1.style.display = "none"
+    ex2.style.display = "none"
+    ex3.style.display = "none"
+    ex4.style.display = "flex"
+    ex5.style.display = "none"
+
+    }
+ }
+ function mostrar4(){
+    var exer4 = 0
+    var ele = document.getElementsByTagName('input');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked)
+                exer4 = ele[i].value;
+        }
+    }
+
+    if(exer4 == 0 || exer4 == exer33){
+        alert(`Selecione uma opção`)
+    }else {      
+        exer44 = exer4
+    base.style.display = "none"
+    ex1.style.display = "none"
+    ex2.style.display = "none"
+    ex3.style.display = "none"
+    ex4.style.display = "none"
+    ex5.style.display = "flex"
+
+    }
+ }
+ function mostrar5(){
+    var exer5 = 0
+    var ele = document.getElementsByTagName('input');
+
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked)
+                exer5 = ele[i].value;
+        }
+    }
+
+    if(exer5 == 0 || exer5 == exer44){
+        alert(`Selecione uma opção`)
+    }else {      
+        exer55 = exer5
+    base.style.display = "none"
+    ex1.style.display = "none"
+    ex2.style.display = "none"
+    ex3.style.display = "none"
+    ex4.style.display = "none"
+    ex5.style.display = "none"
+
+    if (exer11 == 1 && exer22 == 6 && exer33 == 11 && exer44 == 16 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer11 == 1 && exer22 == 6 && exer33 == 11 && exer44 == 16 || exer11 == 1 && exer22 == 6 && exer33 == 11 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer11 == 1 && exer22 == 6 && exer44 == 16 && exer55 == 21 || exer11 == 1 && exer33 == 11 && exer44 == 16 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer22 == 6 && exer33 == 11 && exer44 == 16 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer11 == 1 && exer22 == 6 && exer33 == 11 || exer11 == 1 && exer22 == 6 && exer44 == 16 || exer11 == 1 && exer22 == 6 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer22 == 6 && exer33 == 11 && exer44 == 16 || exer22 == 6 && exer33 == 11 && exer55 ==21){
+        boxe1.style.display = "block"
+    } else if (exer11 == 1 && exer33 == 11 && exer44 == 16 || exer33 == 11 && exer44 == 16 && exer55 == 21){
+        boxe1.style.display = "block"
+    } else if (exer11 == 1 && exer44 == 16 && exer55 == 21 || exer22 == 6 && exer44 == 16 && exer55 == 21){
+        boxe1.style.display = "block"
+    }else if (exer11 == 2 && exer22 == 7 && exer33 == 12 && exer44 == 17 && exer55 == 22){
+        boxe2.style.display = "block"
+    } else if (exer11 == 2 && exer22 == 7 && exer33 == 12 && exer44 == 17 || exer11 == 2 && exer22 == 7 && exer33 == 12 && exer55 == 22){
+        boxe2.style.display = "block"
+    } else if (exer11 == 2 && exer22 == 7 && exer44 == 17 && exer55 == 22 || exer11 == 2 && exer33 == 12 && exer44 == 17 && exer55 == 22){
+        boxe2.style.display = "block"
+    } else if (exer22 == 7 && exer33 == 12 && exer44 == 17 && exer55 == 22){
+        boxe2.style.display = "block"
+    } else if (exer11 == 2 && exer22 == 7 && exer33 == 12 || exer11 == 2 && exer22 == 7 && exer44 == 17 || exer11 == 2 && exer22 == 7 && exer55 == 22){
+        boxe2.style.display = "block"
+    } else if (exer22 == 7 && exer33 == 12 && exer44 == 17 || exer22 == 7 && exer33 == 12 && exer54 ==22){
+        boxe2.style.display = "block"
+    } else if (exer11 == 2 && exer33 == 12 && exer44 == 17 || exer33 == 12 && exer44 == 17 && exer55== 22){
+        boxe2.style.display = "block"
+    } else if (exer11 == 2 && exer44 == 17 && exer55 == 22 || exer22 == 7 && exer44 == 17 && exer55 == 22){
+        boxe2.style.display = "block"
+    }else if (exer11 == 3 && exer22 == 8 && exer33 == 13 && exer44 == 18 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer11 == 3 && exer22 == 8 && exer33 == 13 && exer44 == 18 || exer11 == 3 && exer22 == 8 && exer33 == 13 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer11 == 3 && exer22 == 8 && exer44 == 18 && exer55 == 23 || exer11 == 3 && exer33 == 13 && exer44 == 18 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer22 == 8 && exer33 == 13 && exer44 == 18 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer11 == 3 && exer22 == 8 && exer33 == 13 || exer11 == 3 && exer22 == 8 && exer44 == 18 || exer11 == 3 && exer22 == 8 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer22 == 8 && exer33 == 13 && exer44 == 18 || exer22 == 8 && exer33 == 13 && exer55 ==23){
+        boxe3.style.display = "block"
+    } else if (exer11 == 3 && exer33 == 13 && exer43 == 18 || exer33 == 13 && exer44 == 18 && exer55 == 23){
+        boxe3.style.display = "block"
+    } else if (exer11 == 3 && exer44 == 18 && exer55 == 23 || exer22 == 8 && exer44 == 18 && exer55 == 23){
+        boxe3.style.display = "block"
+    }else if (exer11 == 4 && exer22 == 9 && exer33 == 14 && exer44 == 19 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer11 == 4 && exer22 == 9 && exer33 == 14 && exer44 == 19 || exer11 == 4 && exer22 == 9 && exer33 == 14 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer11 == 4 && exer22 == 9 && exer44 == 19 && exer55 == 24 || exer11 == 4 && exer33 == 14 && exer44 == 19 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer22 == 9 && exer33 == 14 && exer44 == 19 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer11 == 4 && exer22 == 9 && exer33 == 14 || exer11 == 4 && exer22 == 9 && exer44 == 19 || exer11 == 4 && exer22 == 9 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer22 == 9 && exer33 == 14 && exer44 == 19 || exer22 == 9 && exer33 == 14 && exer55 ==24){
+        boxe4.style.display = "block"
+    } else if (exer11 == 4 && exer33 == 14 && exer44 == 19 || exer33 == 14 && exer44 == 19 && exer55 == 24){
+        boxe4.style.display = "block"
+    } else if (exer11 == 4 && exer44 == 19 && exer55 == 24 || exer22 == 9 && exer44 == 19 && exer55 == 24){
+        boxe4.style.display = "block"
+    }else if (exer11 == 5 && exer22 == 10 && exer33 == 15 && exer44 == 20 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer11 == 5 && exer22 ==10 && exer33 == 15 && exer44 == 20 || exer11 == 5 && exer22 == 10 && exer33 == 15 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer11 == 5 && exer22 == 10 && exer44 == 20 && exer55 == 25 || exer11 == 5 && exer33 == 15 && exer44 == 20 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer22 == 10 && exer33 == 15 && exer44 == 20 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer11 == 5 && exer22 == 10 && exer33 == 15 || exer11 == 5 && exer22 == 10 && exer44 == 20 || exer11 == 5 && exer22 == 10 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer22 == 10 && exer33 == 15 && exer44 == 20 || exer22 == 10 && exer33 == 15 && exer55 ==25){
+        boxe5.style.display = "block"
+    } else if (exer11 == 5 && exer33 == 15 && exer44 == 20 || exer33 == 15 && exer44 == 20 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else if (exer11 == 5 && exer44 == 20 && exer55 == 25 || exer22 == 10 && exer44 == 20 && exer55 == 25){
+        boxe5.style.display = "block"
+    } else {
+        boxe6.style.display = "block"
+    }
+    }
+ }
+
+ function voltar(){
+    exer11 = 0
+    exer22 = 0
+    exer33 = 0
+    exer44 = 0
+    exer55 = 0
+    boxe1.style.display = "none"
+    boxe2.style.display = "none"
+    boxe3.style.display = "none"
+    boxe4.style.display = "none"
+    boxe5.style.display = "none"
+    boxe6.style.display = "none"
+    base.style.display = "block"
+ }
+</script>
