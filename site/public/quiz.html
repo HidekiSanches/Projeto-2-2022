@@ -320,6 +320,7 @@
     var exer33 = 0
     var exer44 = 0
     var exer55 = 0
+    var pontos = 0
 
 
  function iniciar1(){
@@ -455,88 +456,20 @@
     ex4.style.display = "none"
     ex5.style.display = "none"
 
-    if (exer11 == 1 && exer22 == 6 && exer33 == 11 && exer44 == 16 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer11 == 1 && exer22 == 6 && exer33 == 11 && exer44 == 16 || exer11 == 1 && exer22 == 6 && exer33 == 11 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer11 == 1 && exer22 == 6 && exer44 == 16 && exer55 == 21 || exer11 == 1 && exer33 == 11 && exer44 == 16 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer22 == 6 && exer33 == 11 && exer44 == 16 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer11 == 1 && exer22 == 6 && exer33 == 11 || exer11 == 1 && exer22 == 6 && exer44 == 16 || exer11 == 1 && exer22 == 6 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer22 == 6 && exer33 == 11 && exer44 == 16 || exer22 == 6 && exer33 == 11 && exer55 ==21){
-        boxe1.style.display = "block"
-    } else if (exer11 == 1 && exer33 == 11 && exer44 == 16 || exer33 == 11 && exer44 == 16 && exer55 == 21){
-        boxe1.style.display = "block"
-    } else if (exer11 == 1 && exer44 == 16 && exer55 == 21 || exer22 == 6 && exer44 == 16 && exer55 == 21){
-        boxe1.style.display = "block"
-    }else if (exer11 == 2 && exer22 == 7 && exer33 == 12 && exer44 == 17 && exer55 == 22){
-        boxe2.style.display = "block"
-    } else if (exer11 == 2 && exer22 == 7 && exer33 == 12 && exer44 == 17 || exer11 == 2 && exer22 == 7 && exer33 == 12 && exer55 == 22){
-        boxe2.style.display = "block"
-    } else if (exer11 == 2 && exer22 == 7 && exer44 == 17 && exer55 == 22 || exer11 == 2 && exer33 == 12 && exer44 == 17 && exer55 == 22){
-        boxe2.style.display = "block"
-    } else if (exer22 == 7 && exer33 == 12 && exer44 == 17 && exer55 == 22){
-        boxe2.style.display = "block"
-    } else if (exer11 == 2 && exer22 == 7 && exer33 == 12 || exer11 == 2 && exer22 == 7 && exer44 == 17 || exer11 == 2 && exer22 == 7 && exer55 == 22){
-        boxe2.style.display = "block"
-    } else if (exer22 == 7 && exer33 == 12 && exer44 == 17 || exer22 == 7 && exer33 == 12 && exer54 ==22){
-        boxe2.style.display = "block"
-    } else if (exer11 == 2 && exer33 == 12 && exer44 == 17 || exer33 == 12 && exer44 == 17 && exer55== 22){
-        boxe2.style.display = "block"
-    } else if (exer11 == 2 && exer44 == 17 && exer55 == 22 || exer22 == 7 && exer44 == 17 && exer55 == 22){
-        boxe2.style.display = "block"
-    }else if (exer11 == 3 && exer22 == 8 && exer33 == 13 && exer44 == 18 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer11 == 3 && exer22 == 8 && exer33 == 13 && exer44 == 18 || exer11 == 3 && exer22 == 8 && exer33 == 13 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer11 == 3 && exer22 == 8 && exer44 == 18 && exer55 == 23 || exer11 == 3 && exer33 == 13 && exer44 == 18 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer22 == 8 && exer33 == 13 && exer44 == 18 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer11 == 3 && exer22 == 8 && exer33 == 13 || exer11 == 3 && exer22 == 8 && exer44 == 18 || exer11 == 3 && exer22 == 8 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer22 == 8 && exer33 == 13 && exer44 == 18 || exer22 == 8 && exer33 == 13 && exer55 ==23){
-        boxe3.style.display = "block"
-    } else if (exer11 == 3 && exer33 == 13 && exer43 == 18 || exer33 == 13 && exer44 == 18 && exer55 == 23){
-        boxe3.style.display = "block"
-    } else if (exer11 == 3 && exer44 == 18 && exer55 == 23 || exer22 == 8 && exer44 == 18 && exer55 == 23){
-        boxe3.style.display = "block"
-    }else if (exer11 == 4 && exer22 == 9 && exer33 == 14 && exer44 == 19 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer11 == 4 && exer22 == 9 && exer33 == 14 && exer44 == 19 || exer11 == 4 && exer22 == 9 && exer33 == 14 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer11 == 4 && exer22 == 9 && exer44 == 19 && exer55 == 24 || exer11 == 4 && exer33 == 14 && exer44 == 19 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer22 == 9 && exer33 == 14 && exer44 == 19 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer11 == 4 && exer22 == 9 && exer33 == 14 || exer11 == 4 && exer22 == 9 && exer44 == 19 || exer11 == 4 && exer22 == 9 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer22 == 9 && exer33 == 14 && exer44 == 19 || exer22 == 9 && exer33 == 14 && exer55 ==24){
-        boxe4.style.display = "block"
-    } else if (exer11 == 4 && exer33 == 14 && exer44 == 19 || exer33 == 14 && exer44 == 19 && exer55 == 24){
-        boxe4.style.display = "block"
-    } else if (exer11 == 4 && exer44 == 19 && exer55 == 24 || exer22 == 9 && exer44 == 19 && exer55 == 24){
-        boxe4.style.display = "block"
-    }else if (exer11 == 5 && exer22 == 10 && exer33 == 15 && exer44 == 20 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer11 == 5 && exer22 ==10 && exer33 == 15 && exer44 == 20 || exer11 == 5 && exer22 == 10 && exer33 == 15 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer11 == 5 && exer22 == 10 && exer44 == 20 && exer55 == 25 || exer11 == 5 && exer33 == 15 && exer44 == 20 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer22 == 10 && exer33 == 15 && exer44 == 20 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer11 == 5 && exer22 == 10 && exer33 == 15 || exer11 == 5 && exer22 == 10 && exer44 == 20 || exer11 == 5 && exer22 == 10 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer22 == 10 && exer33 == 15 && exer44 == 20 || exer22 == 10 && exer33 == 15 && exer55 ==25){
-        boxe5.style.display = "block"
-    } else if (exer11 == 5 && exer33 == 15 && exer44 == 20 || exer33 == 15 && exer44 == 20 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else if (exer11 == 5 && exer44 == 20 && exer55 == 25 || exer22 == 10 && exer44 == 20 && exer55 == 25){
-        boxe5.style.display = "block"
-    } else {
-        boxe6.style.display = "block"
+    pontos = Number(exer11) + Number(exer22) + Number(exer33) + Number(exer44) + Number(exer55)
+
+    if(pontos <= 55 || pontos >= 75){
+        boxe6.style.display="block"
+    }else if(pontos <= 58){
+        boxe1.style.display="block"
+    }else if(pontos <= 62){
+        boxe2.style.display="block"
+    }else if(pontos <= 66){
+        boxe3.style.display="block"
+    }else if(pontos <= 70){
+        boxe4.style.display="block"
+    }else if(pontos < 75){
+        boxe5.style.display="block"
     }
     }
  }
