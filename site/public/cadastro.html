@@ -48,7 +48,7 @@
                     </div>
                     <div class="half-box spacing">
                         <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="Digite o seu nome">
+                        <input type="text" name="name" id="nome" placeholder="Digite o seu nome">
                     </div>
                     <div class="half-box">
                         <label for="cpf">CPF</label>
@@ -101,12 +101,11 @@
         var CPFVar= cpf.value;
         var senhaVar = senha.value;
         var agreementVar = agreement.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var confirmacaoSenhaVar = confirmation.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || CPFVar == "") {
+        if (nomeVar == "" || emailVar == "" || CPFVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
             finalizarAguardar();
             return false;
         }
@@ -129,7 +128,6 @@
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
