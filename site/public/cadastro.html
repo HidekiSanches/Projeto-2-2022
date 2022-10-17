@@ -103,9 +103,9 @@
         var agreementVar = agreement.value;
         var confirmacaoSenhaVar = confirmation.value;
 
-        if (nomeVar == "" || emailVar == "" || CPFVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || CPFVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || agreementVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "(Mensagem de erro para campos em branco)";
             finalizarAguardar();
             return false;
         }

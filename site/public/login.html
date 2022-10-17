@@ -50,6 +50,9 @@
                 <div id="div_aguardar" class="loading-div" style="display: none;">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
+                <div id="div_erros_login">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +73,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "(Mensagem de erro para campos em branco)";
             finalizarAguardar();
             return false;
         }

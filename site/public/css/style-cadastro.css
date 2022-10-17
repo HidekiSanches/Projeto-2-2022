@@ -118,6 +118,7 @@ a {
 }
 
 .card_erro #mensagem_erro{
+  color: black;
   font-weight: 500;
   font-size: 20px;
 }
