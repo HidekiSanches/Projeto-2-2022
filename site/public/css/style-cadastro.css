@@ -61,6 +61,7 @@ input {
 .box input:focus {
     border-color: #8C1C25;
 }
+
 .box button{
     display: block;
     border-radius: 20px;

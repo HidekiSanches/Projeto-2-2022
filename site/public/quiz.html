@@ -7,13 +7,14 @@
     <title>Quiz D&D - Dungeons & Dragons</title>
     <link rel="stylesheet" href="css\style-quiz.css">
     <link rel="icon" href="assets/icon/logo.png">
+    <script src="js/funcoes.js"></script>
 </head>
-<body onload=" atualizarFeed()">
+<body>
     <div class="background">
         <div class="header">
             <div class="container">
                 <div class="logo">
-                    <img src="assets/icon/logo.png" alt="" width="70px">
+                    <a href="index2.html"><img src="assets/icon/logo.png" alt="" width="70px"></a>
                     <h1>Dungeons & Dragons</h1>
                 </div>
                 <ul class="navbar">
@@ -35,6 +36,7 @@
                     </div>
                     <div class="full-box">
                         <button onclick="iniciar1()">Iniciar quiz</button>
+                        <button onclick="grafico()">Grafico de classes</button>
                     </div>
                 </div>
             </div>
@@ -199,111 +201,6 @@
                     </div>
             </div>
             </div>
-            <div class="box" id="boxe1" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o mago! </h4>
-                <p>O mago é uma classe arcana que existe desde os primórdios do D&D, sendo fortemente influenciado por 
-                    Gandalf e Saruman. Além disso, como são muito inteligentes, os magos utilizam sua excelente memória 
-                    para guardar porções de conhecimento sobre diversos tipos de assuntos e por isso são consultados 
-                    quando alguém precisa de um conhecimento específico.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/mage.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
-                <div class="box" id="boxe2" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o guerreiro! </h4>
-                <p>O guerreiro remete a imagem icônica do herói em armadura empunhando sua arma contra uma inimigo 
-                    aparente mais poderoso que ele. A base histórica desta classe são os grandes heróis da literatura, 
-                    tanto histórica quanto fantástica, como Aquiles, Artur, Beowulf, Tristão e Sigmund. Esta classe pode 
-                    atuar na linha de frente ou na retaguarda com igual desenvoltura, e pode atuar como atacante e 
-                    defensor com a mesma competência.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/fighter.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box" id="boxe3" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o ladino! </h4>
-                <p>À primeira vista, o nome dessa classe pode induzir o jogador a achar que se trata de uma classe para 
-                    personagens exclusivamente desonestos, mas não é bem o caso. Não que isso esteja muito longe da 
-                    verdade, uma vez que o ladino usa artimanhas e trapaças para atingir seus objetivos, mas nem por 
-                    isso ele precisa ser maligno. Alguns exemplos de ladinos de persogens na literatura que usam astúsia 
-                    ao invés da força bruta são Bilbo, Ezio e Jaqen H'ghar.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/rogue.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box" id="boxe4" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o Clérigo! </h4>
-                <p>O clérigo é um religioso, um indivíduo que dedica sua vida a levar a palavra de seu deus para os 
-                    outros. Estes personagens são admirados por aqueles que seguem os preceitos do mesmo deus, e temidos 
-                    e odiados por aqueles que adoram outras dinvidades. A base histórica do clérigo são os guerreiros 
-                    das ordens militares cristãs que participam das cruzadas, como os templários e hospitalários, por 
-                    isso os clérigos usam armaduras e usam armas.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/cleric.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box" id="boxe5" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o druida! </h4>
-                <p>O druida é um lider religioso ligado à natureza, o que o aproxima tematicamente do clérigo, no 
-                    entanto, enquanto o clérigo cultua uma dinvidade, o druida reverencia a natureza. A base histórica 
-                    desta classe é o líder espiritual da civilização celta, cuja religião baseava-se no animismo, um 
-                    sistema de crenças que considera que tudo o que existe possui um espírito. O druida não era apenas 
-                    um sarcedote, mas também um estudiosa, professor, conselheiro, jurista, filósofo, curandeiro e mesmo 
-                    poeta, e por isso era considerado como detentor de grande saber.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/druid.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box" id="boxe6" style="display: none;">
-                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o monge! </h4>
-                <p>O monge é a classe mais exótica presente no D&D. Todas as classes presentes no D&D são baseadas em 
-                    personagens da fantasia ocidental, exceto o monge. Apesar da figura do monge existir na literatura 
-                    ocidental, estes personagens são descritos como homens religiosos vivendo isolado em monastérios 
-                    cujas atividades se restringem a copiar livros, praticar cantos gregorianos e eventualmente produzir 
-                    suas próprias cervejas e outras bebidas. A classe do monge baseia-se no personagem característico da 
-                    fantasia oriental, que apesar de também ser uma figura religiosa que mora em um monastério isolado, 
-                    passa seus dias meditando e praticando artes marciais. Essa classe foi introduzida na década de 70 
-                    graças à popularidade de filmes de kung-fu e à figura icônica de Bruce Lee.</p>
-                <div class="boxes">
-                    <div class="center">
-                        <img src="assets/imgs/monk.jpg" alt="">
-                    </div>
-                    <div class="full-box">
-                        <button onclick="voltar()">Voltar</button>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="footer">
             <div class="container">
@@ -316,11 +213,6 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
-    let proximaAtualizacao;
-        
-    window.onload = obterDadosGrafico(1);
-
-    verificar_autenticacao();
 
     var exer11 = 0
     var exer22 = 0
@@ -328,6 +220,12 @@
     var exer44 = 0
     var exer55 = 0
     var pontos = 0
+
+    var resposta2 = 0
+    var resposta3 = 0
+    var resposta4 = 0
+    var resposta5 = 0
+    var resposta6 = 0
 
 
  function iniciar1(){
@@ -466,33 +364,35 @@
     pontos = Number(exer11) + Number(exer22) + Number(exer33) + Number(exer44) + Number(exer55)
 
     if(pontos <= 55 || pontos >= 75){
-        boxe6.style.display="block"
+        window.location = "monge.html"
     }else if(pontos <= 58){
-        boxe1.style.display="block"
+        window.location = "mago.html"
     }else if(pontos <= 62){
-        boxe2.style.display="block"
+        window.location = "guerreiro.html"
     }else if(pontos <= 66){
-        boxe3.style.display="block"
+        window.location = "ladino.html"
     }else if(pontos <= 70){
-        boxe4.style.display="block"
+        window.location = "clerigo.html"
     }else if(pontos < 75){
-        boxe5.style.display="block"
+        window.location = "druida.html"
     }
     }
- }
 
- function voltar(){
     exer11 = 0
     exer22 = 0
     exer33 = 0
     exer44 = 0
     exer55 = 0
-    boxe1.style.display = "none"
-    boxe2.style.display = "none"
-    boxe3.style.display = "none"
-    boxe4.style.display = "none"
-    boxe5.style.display = "none"
-    boxe6.style.display = "none"
-    base.style.display = "block"
+
+    console.log(exer11)
+    console.log(exer22)
+    console.log(exer33)
+    console.log(exer44)
+    console.log(exer55)
+ }
+
+
+ function grafico(){
+    window.location = "dashboard/dashboard.html"
  }
 </script>

@@ -65,6 +65,7 @@ a {
 }
 
 .background {
+    height: 600px;
     padding: 3vw;
     background-image: linear-gradient(white, #8C1C25);     /* background em degrade */
     background-size: cover;

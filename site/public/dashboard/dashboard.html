@@ -5,8 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Dungeons & Dragons</title>
+    <link rel="stylesheet" href="../css/style-dashboard.css">
+    <link rel="icon" href="../assets/icon/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/funcoes.js"></script>
 </head>
 <body>
-    
+    <div class="background">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="../assets/icon/logo.png" alt="" width="70px">
+                    <h1>Dungeons & Dragons</h1>
+                </div>
+                <ul class="navbar">
+                    <li>Bem-vindo!</li>
+                    <li class="here"><span id="b_usuario">usuário</span></li>
+                    <li>|</li>
+                    <li class=""><a href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conteiner">
+            <div class="boxes">
+                <div class="box">
+                    <div class="flex">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="alinhado">
+                        <div class="metri">
+                            <h2>Mago:</h2>
+                            <h3>70</h3>
+                        </div>
+                        <div class="metri">
+                            <h2>Guerreiro:</h2>
+                            <h3>30</h3>
+                        </div>
+                        <div class="metri">
+                            <h2>Ladino:</h1>
+                                <h3>50</h3>
+                        </div>
+                        <div class="metri">
+                            <h2>Clérigo:</h1>
+                            <h3>40</h3>
+                        </div>
+                        <div class="metri">
+                            <h2>Druida:</h1>
+                                <h3>55</h3>
+                            </div>
+                            <div class="metri">
+                                <h2>Monge:</h1>
+                                    <h3>12</h3>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="voltar()">Voltar</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <i>&copy; 2022 D&D &reg; todos os direitos reservados</i>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const labels = [
+      'Mago',
+      'Guerreiro',
+      'Ladino',
+      'Clérigo',
+      'Druida',
+      'Monge'
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        data: [70,30,50,40,55,12],
+        backgroundColor: 
+        ['rgb(64, 20, 20)',
+        'rgb(140, 28, 37)',
+        'rgb(196, 51, 63)',
+        'rgb(255,255,255)',
+        'rgb(110, 112, 140)',
+        'rgb(161, 146, 166)',
+        ]
+      }]
+    };
+    
+  
+    const config = {
+    type: 'doughnut',
+    data: data,
+     };
+  </script>
+  <script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+    );
+  </script>
 </html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    
+    let proximaAtualizacao;
+        
+    window.onload = obterDadosGrafico(1);
+
+    verificar_autenticacao();
+
+    function voltar(){
+        window.location = "../quiz.html"
+    }
+</script>

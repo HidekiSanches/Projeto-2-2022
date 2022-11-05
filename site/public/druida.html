@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz D&D - Dungeons & Dragons</title>
+    <link rel="stylesheet" href="css\style-quiz.css">
+    <link rel="icon" href="assets/icon/logo.png">
+    <script src="js/funcoes.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index2.html"><img src="assets/icon/logo.png" alt="" width="70px"></a>
+                    <h1>Dungeons & Dragons</h1>
+                </div>
+                <ul class="navbar">
+                    <li>Bem-vindo!</li>
+                    <li class="here"><span id="b_usuario">usuário</span></li>
+                    <li>|</li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box" id="boxe6">
+                <h2>Quiz D&D - Qual classe é a sua cara?</h2>
+                <h4>Parabéns! A classe que é a sua cara, é o monge! </h4>
+                <p>O monge é a classe mais exótica presente no D&D. Todas as classes presentes no D&D são baseadas em 
+                    personagens da fantasia ocidental, exceto o monge. Apesar da figura do monge existir na literatura 
+                    ocidental, estes personagens são descritos como homens religiosos vivendo isolado em monastérios 
+                    cujas atividades se restringem a copiar livros, praticar cantos gregorianos e eventualmente produzir 
+                    suas próprias cervejas e outras bebidas. A classe do monge baseia-se no personagem característico da 
+                    fantasia oriental, que apesar de também ser uma figura religiosa que mora em um monastério isolado, 
+                    passa seus dias meditando e praticando artes marciais. Essa classe foi introduzida na década de 70 
+                    graças à popularidade de filmes de kung-fu e à figura icônica de Bruce Lee.</p>
+                <div class="boxes">
+                    <div class="center">
+                        <img src="assets/imgs/monk.jpg" alt="">
+                    </div>
+                    <div class="full-box">
+                        <button onclick="cadastrar()">Voltar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <i>&copy; 2022 D&D &reg; todos os direitos reservados</i>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var idUsuario = sessionStorage.ID_USUARIO;
+    
+    function cadastrar(){
+    var resposta1 = 0
+    var resposta2 = 0
+    var resposta3 = 0
+    var resposta4 = 0
+    var resposta5 = 0
+    var resposta6 = 0
+
+    resposta5 = 1
+    
+    // Enviando o valor da nova input
+    fetch('/respostas/cadastrar', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            resposta1Server: resposta1,
+            resposta2Server: resposta2,
+            resposta3Server: resposta3,
+            resposta4Server: resposta4,
+            resposta5Server: resposta5,
+            resposta6Server: resposta6,
+            idUsuarioServer: idUsuario
+        })
+    }).then(function (resposta) {
+        console.log("resposta: ", resposta);
+    
+        if (resposta.ok) {
+    
+            setTimeout(() => {
+                window.location = "quiz.html"
+            }, "2000")
+    
+        } else {
+            throw ("Houve um erro no insert!");
+        }
+    })
+    }
+</script>
