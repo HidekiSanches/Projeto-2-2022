@@ -57,6 +57,8 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var idUsuario = sessionStorage.ID_USUARIO;
+    var idPontos = sessionStorage.ID_PONTOS;
+    var qtdPontos = sessionStorage.QTDPONTOS;
     
     function cadastrar(){
     var resposta1 = 0
@@ -68,6 +70,27 @@
 
     resposta5 = 1
     
+        // Enviando o valor da nova input
+        fetch('/pontos/cadastrar', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            pontosServer: qtdPontos
+        })
+    }).then(function (resposta) {
+        console.log("resposta: ", resposta);
+    
+        if (resposta.ok) {
+
+    
+        } else {
+            throw ("Houve um erro no insert!");
+        }
+    })   
     // Enviando o valor da nova input
     fetch('/respostas/cadastrar', {
         method: "POST",
@@ -83,7 +106,8 @@
             resposta4Server: resposta4,
             resposta5Server: resposta5,
             resposta6Server: resposta6,
-            idUsuarioServer: idUsuario
+            idUsuarioServer: idUsuario,
+            idPontosServer: idPontos
         })
     }).then(function (resposta) {
         console.log("resposta: ", resposta);

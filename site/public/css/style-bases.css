@@ -50,7 +50,7 @@ a {
     color: #8C1C25;
     text-decoration: none;
 }
-.navbar a:focus {           /*:focus é quando a tag <a> for selecionada */
+.navbar a:focus {           
     border-bottom: solid 2px #323232;
     border-color: #8C1C25;
 }
@@ -67,7 +67,7 @@ a {
 .background {
     height: 600px;
     padding: 3vw;
-    background-image: linear-gradient(white, #8C1C25);     /* background em degrade */
+    background-image: linear-gradient(white, #8C1C25);     
     background-size: cover;
     margin-bottom: 0;
 }

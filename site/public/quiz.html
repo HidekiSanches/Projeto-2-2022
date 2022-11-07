@@ -212,6 +212,7 @@
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var idPontos = sessionStorage.ID_AVISO;
     
 
     var exer11 = 0
@@ -355,14 +356,11 @@
     }else {      
         exer55 = exer5
     base.style.display = "none"
-    ex1.style.display = "none"
-    ex2.style.display = "none"
-    ex3.style.display = "none"
-    ex4.style.display = "none"
-    ex5.style.display = "none"
 
     pontos = Number(exer11) + Number(exer22) + Number(exer33) + Number(exer44) + Number(exer55)
 
+    sessionStorage.QTDPONTOS = pontos
+    
     if(pontos <= 55 || pontos >= 75){
         window.location = "monge.html"
     }else if(pontos <= 58){
@@ -378,6 +376,7 @@
     }
     }
 
+    
     exer11 = 0
     exer22 = 0
     exer33 = 0
