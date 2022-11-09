@@ -26,17 +26,20 @@
             </div>
         </div>
         <div class="container">
-            <div class="box" id="boxe2">
+            <div class="box" id="boxe6">
                 <h2>Quiz D&D - Qual classe é a sua cara?</h2>
-                <h4>Parabéns! A classe que é a sua cara, é o guerreiro! </h4>
-                <p>O guerreiro remete a imagem icônica do herói em armadura empunhando sua arma contra uma inimigo 
-                    aparente mais poderoso que ele. A base histórica desta classe são os grandes heróis da literatura, 
-                    tanto histórica quanto fantástica, como Aquiles, Artur, Beowulf, Tristão e Sigmund. Esta classe pode 
-                    atuar na linha de frente ou na retaguarda com igual desenvoltura, e pode atuar como atacante e 
-                    defensor com a mesma competência.</p>
+                <h4>Parabéns! A classe que é a sua cara, é o monge! </h4>
+                <p>O monge é a classe mais exótica presente no D&D. Todas as classes presentes no D&D são baseadas em 
+                    personagens da fantasia ocidental, exceto o monge. Apesar da figura do monge existir na literatura 
+                    ocidental, estes personagens são descritos como homens religiosos vivendo isolado em monastérios 
+                    cujas atividades se restringem a copiar livros, praticar cantos gregorianos e eventualmente produzir 
+                    suas próprias cervejas e outras bebidas. A classe do monge baseia-se no personagem característico da 
+                    fantasia oriental, que apesar de também ser uma figura religiosa que mora em um monastério isolado, 
+                    passa seus dias meditando e praticando artes marciais. Essa classe foi introduzida na década de 70 
+                    graças à popularidade de filmes de kung-fu e à figura icônica de Bruce Lee.</p>
                 <div class="boxes">
                     <div class="center">
-                        <img src="assets/imgs/fighter.jpg" alt="">
+                        <img src="assets/imgs/monk.jpg" alt="">
                     </div>
                     <div class="full-box">
                         <button onclick="cadastrar()">Voltar</button>
@@ -54,7 +57,6 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var idUsuario = sessionStorage.ID_USUARIO;
-    var idPontos = sessionStorage.ID_PONTOS;
     var qtdPontos = sessionStorage.QTDPONTOS;
     
     function cadastrar(){
@@ -82,8 +84,7 @@
         console.log("resposta: ", resposta);
     
         if (resposta.ok) {
-
-    
+            sessionStorage.ID_PONTOS = resposta.id
         } else {
             throw ("Houve um erro no insert!");
         }
@@ -105,13 +106,12 @@
             resposta5Server: resposta5,
             resposta6Server: resposta6,
             idUsuarioServer: idUsuario,
-            idPontosServer: idPontos
         })
     }).then(function (resposta) {
         console.log("resposta: ", resposta);
     
         if (resposta.ok) {
-    
+            sessionStorage.ID_PONTOS = resposta.id
             setTimeout(() => {
                 window.location = "quiz.html"
             }, "2000")

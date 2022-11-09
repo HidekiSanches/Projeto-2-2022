@@ -54,7 +54,6 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var idUsuario = sessionStorage.ID_USUARIO;
-    var idPontos = sessionStorege.ID_PONTOS;
     var qtdPontos = sessionStorage.QTDPONTOS;
     
     function cadastrar(){
@@ -82,7 +81,7 @@
         console.log("resposta: ", resposta);
     
         if (resposta.ok) {
-
+            sessionStorage.ID_PONTOS = resposta.id
     
         } else {
             throw ("Houve um erro no insert!");
@@ -104,13 +103,12 @@
             resposta5Server: resposta5,
             resposta6Server: resposta6,
             idUsuarioServer: idUsuario,
-            idPontosServer: idPontos
         })
     }).then(function (resposta) {
         console.log("resposta: ", resposta);
     
         if (resposta.ok) {
-    
+            sessionStorage.ID_PONTOS = resposta.id
             setTimeout(() => {
                 window.location = "quiz.html"
             }, "2000")

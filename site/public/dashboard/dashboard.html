@@ -36,27 +36,27 @@
                         <div class="alinhado">
                         <div class="metri">
                             <h2>Mago:</h2>
-                            <h3>70</h3>
+                            <h3 id="mago"></h3>
                         </div>
                         <div class="metri">
                             <h2>Guerreiro:</h2>
-                            <h3>30</h3>
+                            <h3 id="guerreiro"></h3>
                         </div>
                         <div class="metri">
                             <h2>Ladino:</h1>
-                                <h3>50</h3>
+                            <h3 id="ladino"></h3>
                         </div>
                         <div class="metri">
                             <h2>Clérigo:</h1>
-                            <h3>40</h3>
+                            <h3 id="clerigo"></h3>
                         </div>
                         <div class="metri">
                             <h2>Druida:</h1>
-                                <h3>55</h3>
-                            </div>
-                            <div class="metri">
-                                <h2>Monge:</h1>
-                                    <h3>12</h3>
+                             <h3 id="druida"></h3>
+                        </div>
+                        <div class="metri">
+                            <h2>Monge:</h1>
+                            <h3 id="monge"></h3>
                         </div>
                     </div>
                 </div>
@@ -71,55 +71,79 @@
         </div>
     </div>
 </body>
-<script>
-    const labels = [
-      'Mago',
-      'Guerreiro',
-      'Ladino',
-      'Clérigo',
-      'Druida',
-      'Monge'
-    ];
-  
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: 'My First dataset',
-        data: [70,30,50,40,55,12],
-        backgroundColor: 
-        ['rgb(64, 20, 20)',
-        'rgb(140, 28, 37)',
-        'rgb(196, 51, 63)',
-        'rgb(255,255,255)',
-        'rgb(110, 112, 140)',
-        'rgb(161, 146, 166)',
-        ]
-      }]
-    };
-    
-  
-    const config = {
-    type: 'doughnut',
-    data: data,
-     };
-  </script>
-  <script>
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-    );
-  </script>
+
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
-    let proximaAtualizacao;
-        
-    window.onload = obterDadosGrafico(1);
-
-    verificar_autenticacao();
 
     function voltar(){
         window.location = "../quiz.html"
     }
+
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch("/medidas/pegarSoma").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    throw "Nenhum resultado encontrado!!";
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    console.log(`teste qtd: ${resposta[0]}`)
+                    sessionStorage.QTDCLE = resposta[0].somaClerigo;
+                    sessionStorage.QTDDRU = resposta[0].somaDruida;
+                    sessionStorage.QTDLAD = resposta[0].somaLadino;
+                    sessionStorage.QTDMAG = resposta[0].somaMago;
+                    sessionStorage.QTDMON = resposta[0].somaMonge;
+                    sessionStorage.QTDGUE = resposta[0].somaGuerreiro;
+
+                    mago.innerHTML = sessionStorage.QTDMAG;
+                    guerreiro.innerHTML = sessionStorage.QTDGUE;
+                    ladino.innerHTML = sessionStorage.QTDLAD;
+                    clerigo.innerHTML = sessionStorage.QTDCLE;
+                    druida.innerHTML = sessionStorage.QTDDRU;
+                    monge.innerHTML = sessionStorage.QTDMON;
+
+                    let labels = [
+'Mago',
+'Guerreiro',
+'Ladino',
+'Clérigo',
+'Druida',
+'Monge',
+];
+
+// Criando estrutura para plotar gráfico - dados
+let dados = {
+labels: labels,
+datasets: [{
+    label: 'Classes',
+    data: [sessionStorage.QTDMAG, sessionStorage.QTDGUE, sessionStorage.QTDLAD, sessionStorage.QTDCLE, sessionStorage.QTDDRU, sessionStorage.QTDMON],
+    fill: false,
+    borderColor: ['rgb(64, 20, 20)', 'rgb(140, 28, 37)', 'rgb(196, 51, 63)', 'rgb(255,255,255)', 'rgb(110, 112, 140)', 'rgb(161, 146, 166)'],
+    backgroundColor:  ['rgb(64, 20, 20)', 'rgb(140, 28, 37)', 'rgb(196, 51, 63)', 'rgb(255,255,255)', 'rgb(110, 112, 140)', 'rgb(161, 146, 166)'],
+    tension: 0.1
+}]
+
+};
+const config = {
+type: 'doughnut',
+data: dados,
+};
+
+// Adicionando gráfico criado em div na tela
+let myChart = new Chart(
+document.getElementById('myChart'),
+config
+);
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+
 </script>

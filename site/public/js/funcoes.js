@@ -52,4 +52,3 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
-var ponto = pontos
