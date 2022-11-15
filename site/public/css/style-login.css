@@ -13,6 +13,7 @@ input:focus, label:focus {
     border-radius: 10px;
     background-color: rgb(43,47,52,90%);
     padding: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
     border-bottom: solid 3px #23272a;
     border-right: solid 3px #23272a;
 }

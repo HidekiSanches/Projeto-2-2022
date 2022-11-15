@@ -153,6 +153,82 @@
                 </div>
             </div>
         </div>
+        <div class="lore">
+            <h2>Que tal jogar um pouco?</h2>
+            <p id="p1" style="display: flex;"> Você acorda em seu navio com gritos da sua tripulação...</p>
+            <button onclick="png1()"  id="pg1" style="display: flex;"><div class="card1">
+                <div class="content">
+                    <h2>O náufrago</h2>
+                    <div>Ao sair da sua sala, você encontra um grande monstro marinho que balança o seu navio de um lado para o outro, em uma dessas balançadas você é jogado para fora da sua embarcação e bate a sua cabeça nas pedras...</d>
+                </div>
+            </div></button>
+            <p id="p2" style="display: none;"> Você acorda desnorteado em uma praia deserta, sua boca está cheia de areia, você se arruma um pouco e decide procurar por ajuda...</p>
+            <button onclick="png2()" id="pg2" style="display: none;"><div class="card2">
+                <div class="content">
+                    <h2>O lobo</h2>
+                    <div>Ao andar por alguns minutos você encontra com um lobo preso em uma armadilha, ele fixa o seu olhar em você, você para por alguns instantes e...</d>
+                </div>
+            </div></button>
+        <div class="escolha">
+            <p id="p3" style="display: none;"> Você encontra-se em um impasse...</p>
+            <button onclick="png3()" id="pg3" style="display: none;"><div class="card3">
+            <h1>01</h1>
+            <span>Ignore o lobo...</span>
+            <div class="content">
+                <h2>O ataque</h2>
+                <div>Você ignora o lobo e segue viagem, porem você escuta um barulho, ao se virar pra trás você vê um grande lobisomen e outros lobos, você se prepara pra correr...</d>
+            </div>
+        </div></button>
+        <button onclick="png4()" id="pg4" style="display: none;"><div class="card4">
+            <h1>02</h1>
+            <span>Liberte o lobo...</span>
+            <div class="content">
+                <h2>O retorno a jornada</h2>
+                <div>Você liberta o lobo, e depois de ser liberto ele corre para mata, e do lugar onde o lobo correu sai um homen...</d>
+            </div>
+        </div></button>
+    </div>
+    <div class="escolha">
+        <p id="p5" style="display: none;"> Você começa a correr... <i>role um d20</i></p>
+        <button onclick="png5()" id="pg5" style="display: none;"><div class="card5">
+        <h1>01</h1>
+        <span>1-10...</span>
+        <div class="content">
+            <h2>A morte</h2>
+            <div>fim...</d>
+        </div>
+    </div></button>
+    <button onclick="png6()" id="pg6" style="display: none;"><div class="card6">
+        <h1>02</h1>
+        <span>11-20...</span>
+        <div class="content">
+            <h2>A sobrevivência</h2>
+            <div>Você consegue fugir e chegar até uma vila...</d>
+        </div>
+    </div></button>
+    </div>
+    <p id="p7" style="display: none;"> Ao chegar na vila você tem uma surpresa...</p>
+    <button onclick="png7()" id="pg7" style="display: none;"><div class="card7">
+        <div class="content">
+            <h2>A morte</h2>
+            <div>fim...</d>
+        </div>
+    </div></button>
+    <p id="p8" style="display: none;"> Um homem surge da floresta...</p>
+    <button onclick="png8()" id="pg8" style="display: none;"><div class="card8">
+        <div class="content">
+            <h2>A ajuda</h2>
+            <div>O homem te comprimenta e se oferece a te ajudar, ele te levar até sua vila...</d>
+        </div>
+    </div></button>
+    <p id="p9" style="display: none;"> Você chega na vila e nela...</p>
+    <button onclick="png9()" id="pg9" style="display: none;"><div class="card9">
+        <div class="content">
+            <h2>A vila</h2>
+            <div>Você anda por uns 15min e chega na vila, você é apresentado para chefe da vila e ela se oferece ate levar de volta para casa. fim...</d>
+        </div>
+    </div></button>
+        </div>
     </div>
     <div class="footer">
         <div class="container">
@@ -222,5 +298,100 @@
         boxes1.style.display = "none"
         boxes2.style.display = "none"
     }
-
+    function png1(){
+        setTimeout(() => {
+            pg1.style="display: none;"
+            p1.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg2.style="display: flex;"
+            p2.style="display: flex;"
+        }, "1000")
+    }
+    function png2(){
+        setTimeout(() => {
+            pg2.style="display: none;"
+            p2.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg3.style="display: flex;"
+            p3.style="display: flex;"
+            pg4.style="display: flex;"
+        }, "1000")
+    }
+    function png3(){
+        setTimeout(() => {
+            pg3.style="display: none;"
+            p3.style="display: none;"
+            pg4.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg5.style="display: flex;"
+            p5.style="display: flex;"
+            pg6.style="display: flex;"
+        }, "1000")       
+    }
+    function png4(){
+        setTimeout(() => {
+            pg3.style="display: none;"
+            p3.style="display: none;"
+            pg4.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg8.style="display: flex;"
+            p8.style="display: flex;"
+        }, "1000")  
+    }
+    function png5(){
+        setTimeout(() => {
+            pg5.style="display: none;"
+            p5.style="display: none;"
+            pg6.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg1.style="display: flex;"
+            p1.style="display: flex;"
+        }, "1000")  
+    }
+    function png6(){
+        setTimeout(() => {
+            pg5.style="display: none;"
+            p5.style="display: none;"
+            pg6.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg7.style="display: flex;"
+            p7.style="display: flex;"
+        }, "1000")  
+    }
+    function png7(){
+        setTimeout(() => {
+            pg7.style="display: none;"
+            p7.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg1.style="display: flex;"
+            p1.style="display: flex;"
+        }, "1000")  
+    }
+    function png8(){
+        setTimeout(() => {
+            pg8.style="display: none;"
+            p8.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg9.style="display: flex;"
+            p9.style="display: flex;"
+        }, "1000")  
+    }
+        function png9(){
+        setTimeout(() => {
+            pg9.style="display: none;"
+            p9.style="display: none;"
+        }, "1001")
+        setTimeout(() => {
+            pg1.style="display: flex;"
+            p1.style="display: flex;"
+        }, "1000")  
+    }
 </script>

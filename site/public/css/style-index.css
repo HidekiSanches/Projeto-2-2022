@@ -42,6 +42,7 @@
 }
 
 .social {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
     margin-top: 10px;
     padding-bottom: 10px;
     background-color: rgb(43, 47, 52, 90%);
@@ -60,6 +61,7 @@
     display: flex;
 }
 .box {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
     margin: 25px 30px 10px 30px;
     display: flex;
     flex-direction: column;
@@ -161,4 +163,418 @@ button {
 .img img {
     border: #8C1C25 solid 6px;
     border-radius: 10px;
+}
+.lore {
+    margin-top: 10px;
+    background-color: rgb(43, 47, 52, 90%);
+    padding: 30px 40px;
+    min-width: 470px;
+    width: 1260px;
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    color: #efefef;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #23272a;
+    border-right: 3px solid #23272a;
+}
+.lore button{
+    padding: 0;
+    margin: 0px 30px;
+    width: 280px;
+    height: 400px;
+    margin-top: 20px;
+    background-color: #23272a;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 10px;
+    display: flex;
+    border: 0px;
+}
+.card1 {
+    background-image: url("../assets/imgs/img6.png");
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card1:hover {
+    background-image: url("../assets/imgs/art5.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card1 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card1 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card2 {
+    background-image: url("../assets/imgs/img5.jpg");
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card2:hover {
+    background-image: url("../assets/imgs/img3.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card2 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card2 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card3 {
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.card3:hover {
+    background-image: url("../assets/imgs/escolha1.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card3 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card3 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card4 {
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.card4:hover {
+    background-image: url("../assets/imgs/escolha2.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card5 {
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.card5:hover {
+    background-image: url("../assets/imgs/art3.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card6 {
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.card6:hover {
+    background-image: url("../assets/imgs/art1.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card7 {
+    background-image: url("../assets/imgs/img2.jpg");
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card7:hover {
+    background-image: url("../assets/imgs/art3.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card8 {
+    background-image: url("../assets/imgs/img4.jpg");
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card8:hover {
+    background-image: url("../assets/imgs/art4.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card9 {
+    background-image: url("../assets/imgs/img2.jpg");
+    position: relative;
+    background-size: 285px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+.card9:hover {
+    background-image: url("../assets/imgs/art6.jpg");
+    position: relative;
+    background-size: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.380);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #efefef;
+    width: 280px;
+    height: 400px;
+}
+button h1{
+    top: 25%;
+    right: 5%;
+    position: absolute;
+    font-size: 8em;
+    color: #ffffff48;
+}
+button span{
+    position: absolute;
+    color: #efefef;
+    font-weight: bold;
+    font-size: 23px;
+}
+.card4 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card4 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card5 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card5 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card6 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card6 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card7 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card7 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card8 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card8 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card9 h2{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.card9 div{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.escolha {
+    display: flex;
+}
+.content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+}
+.card1:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card2:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card3:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card4:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card5:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card6:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card7:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card8:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card9:hover .content{
+    transform: translateY(o);
+    opacity: 1;
+    transition: 0.5s;
+}
+.lore button:hover h1{
+    display: none;
+}
+.lore button:hover span{
+    display: none;
 }
