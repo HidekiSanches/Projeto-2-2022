@@ -107,7 +107,8 @@
                     <button onclick="mostrar1()"><div class="box">
                         <img src="assets/imgs/d20.png" alt="">
                         <h4>D20</h4>
-                        <div class="valor" id="valor"></div>
+                            <div class="valor" id="valor"></div>
+                            <h5>Anterior: </h5><h5 id="antes"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -116,6 +117,7 @@
                         <img src="assets/imgs/d12.png" alt="">
                         <h4>D12</h4>
                         <div class="valor" id="valor2"></div>
+                        <h5>Anterior: </h5><h5 id="antes2"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -124,6 +126,7 @@
                         <img src="assets/imgs/d10.png" alt="">
                         <h4>D10</h4>
                         <div class="valor" id="valor3"></div>
+                        <h5>Anterior: </h5><h5 id="antes3"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -132,6 +135,7 @@
                         <img src="assets/imgs/d8.png" alt="">
                         <h4>D8</h4>
                         <div class="valor" id="valor4"></div>
+                        <h5>Anterior: </h5><h5 id="antes4"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -140,6 +144,7 @@
                         <img src="assets/imgs/d6.png" alt="">
                         <h4>D6</h4>
                         <div class="valor" id="valor5"></div>
+                        <h5>Anterior: </h5><h5 id="antes5"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -148,6 +153,7 @@
                         <img src="assets/imgs/d4.png" alt="">
                         <h4>D4</h4>
                         <div class="valor" id="valor6"></div>
+                        <h5>Anterior: </h5><h5 id="antes6"></h5>
                     </div></button>
                     <button onclick="voltar()">Voltar</button>
                 </div>
@@ -238,6 +244,13 @@
 </body>
 </html>
 <script>
+    var dado20 = []
+    var dado12 = []
+    var dado10 = []
+    var dado8 = []
+    var dado6 = []
+    var dado4 = []
+
     function voltar(){
         D20.style.display = "none"
         D12.style.display = "none"
@@ -251,6 +264,11 @@
     function mostrar1(){
         let result = Math.floor(Math.random() * (20 + 1 - 1)+ 1);
         document.querySelector('#valor').textContent = result;
+        dado20.push(result)
+
+        for (let i = 0;i < dado20.length - 1; i++){
+            antes.innerHTML = `${dado20[i]}`
+        }
 
         D20.style.display = "flex"
         boxes1.style.display = "none"
@@ -259,6 +277,11 @@
     function mostrar2(){
         let result2 = Math.floor(Math.random() * (12 + 1 - 1)+ 1);
         document.querySelector('#valor2').textContent = result2;
+        dado12.push(result2)
+
+        for (let i = 0;i < dado12.length - 1; i++){
+            antes2.innerHTML = `${dado12[i]}`
+        }
 
         D12.style.display = "flex"
         boxes1.style.display = "none"
@@ -267,6 +290,11 @@
     function mostrar3(){
         let result3 = Math.floor(Math.random() * (10 + 1 - 1)+ 1);
         document.querySelector('#valor3').textContent = result3;
+        dado10.push(result3)
+
+        for (let i = 0;i < dado10.length - 1; i++){
+            antes3.innerHTML = `${dado10[i]}`
+        }
 
         D10.style.display = "flex"
         boxes1.style.display = "none"
@@ -275,6 +303,11 @@
     function mostrar4(){
         let result4 = Math.floor(Math.random() * (8 + 1 - 1)+ 1);
         document.querySelector('#valor4').textContent = result4;
+        dado8.push(result4)
+
+        for (let i = 0;i < dado8.length - 1; i++){
+            antes4.innerHTML = `${dado8[i]}`
+        }
 
         D8.style.display = "flex"
         boxes1.style.display = "none"
@@ -283,6 +316,11 @@
     function mostrar5(){
         let result5 = Math.floor(Math.random() * (6 + 1 - 1)+ 1);
         document.querySelector('#valor5').textContent = result5;
+        dado6.push(result5)
+
+        for (let i = 0;i < dado6.length - 1; i++){
+            antes5.innerHTML = `${dado6[i]}`
+        }
 
         D6.style.display = "flex"
         boxes1.style.display = "none"
@@ -291,6 +329,11 @@
     function mostrar6(){
         let result6 = Math.floor(Math.random() * (4 + 1 - 1)+ 1);
         document.querySelector('#valor6').textContent = result6;
+        dado4.push(result6)
+
+        for (let i = 0;i < dado4.length - 1; i++){
+            antes6.innerHTML = `${dado4[i]}`
+        }
 
         D4.style.display = "flex"
         boxes1.style.display = "none"
